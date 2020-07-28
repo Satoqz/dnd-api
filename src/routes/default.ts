@@ -8,9 +8,10 @@ export default class DefaultRoute {
 		const data: listResponse = await baseRequest(this.route);
 
 		if(filter) {
+			const filtered = data.results.filter(r => r.name.toLowerCase().startsWith(filter.toLowerCase()));
 			return {
-				count: data.count,
-				results: data.results.filter(r => r.name.toLowerCase().startsWith(filter.toLowerCase()))
+				count: filtered.length,
+				results: filtered
 			};
 		}
 

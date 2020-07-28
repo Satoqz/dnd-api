@@ -1,6 +1,6 @@
 {
   "name": "dnd-api",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "node api wrapper of https://dnd5eapi.co/",
   "main": "build/lib.js",
   "scripts": {
@@ -8,6 +8,10 @@
   },
   "author": "satoqz",
   "license": "ISC",
+  "repository": {
+	  "type": "git",
+	  "url": "htps://github.com/Satoqz/dnd-api"
+  },
   "dependencies": {
     "@types/node-fetch": "^2.5.7",
     "node-fetch": "^2.6.0"
