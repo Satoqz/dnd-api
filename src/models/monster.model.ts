@@ -1,0 +1,27 @@
+export default interface monsterInfo {
+	_id: string,
+	index: string,
+	name: string,
+	size: string,
+	subtype: string | null
+	alignment: string,
+	armor_class: number,
+	hit_points: number,
+	hit_dice: string,
+	speed: {},
+	strength: number,
+	dexterity: number,
+	constitution: number,
+	intelligence: number,
+	wisdom: number,
+	charisma: number,
+	proficiencies: {},
+	damage_vulnerabilities: string[],
+	damage_resistances: string[],
+	damage_immunities: string[],
+	condition_immunities: string[],
+	senses: {},
+	special_abilities: {}[],
+	actions: [],
+	url: string
+} // eslint-disable-line

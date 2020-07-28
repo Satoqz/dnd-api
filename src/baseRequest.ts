@@ -1,0 +1,10 @@
+import nodefetch from "node-fetch";
+import apiError from "./models/error.model";
+const baseURL = "https://www.dnd5eapi.co/api/";
+
+export default async function baseRequest(query: string): Promise<any | apiError> {
+	// 300 iq line
+	return await (await nodefetch(baseURL + query)).json();
+}
+
+module.exports = baseRequest;
