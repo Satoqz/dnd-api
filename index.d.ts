@@ -13,6 +13,11 @@ export class Spells {
 	public static get(name: string): Promise<spellInfo | apiError>
 }
 
+export class Equipment {
+	public static list(): Promise<listResponse | apiError>
+	public static get(name: string): Promise<equipmentInfo | apiError>
+}
+
 export class StarterEquip {
 	public static list(): Promise<listResponse | apiError>
 	public static get(name: string): Promise<any | apiError>
@@ -40,10 +45,10 @@ export class Classes {
 	public static getSpells(name: string): Promise<listResponse | apiError>
 	public static getSpellCasting(name: string): Promise<listResponse | apiError>
 	public static getProficiencies(name: string): Promise<listResponse | apiError>
-	public static getLevels(name: string)
-	public static getLevel(name: string, level: number)
-	public static getLevelFeatures(name: string, level: number)
-	public static getLevelSpells(name: string, level: number)
+	public static getLevels(name: string): Promise<levelsInfo | apiError>
+	public static getLevel(name: string, level: number): Promise<levelInfo | apiError>
+	public static getLevelFeatures(name: string, level: number): Promise<listResponse | apiError>
+	public static getLevelSpells(name: string, level: number): Promise<listResponse | apiError>
 }
 
 export class Subclasses {
@@ -52,8 +57,8 @@ export class Subclasses {
 	public static getFeatures(name: string): Promise<listResponse | apiError>
 	public static getLevels(name: string): Promise<levelsInfo | apiError>
 	public static getLevel(name: string, level: number) : Promise<levelInfo | apiError>
-	public static getLevelFeatures(name: string, level: number)
-	public static getLevelSpells(name: string, level: number)
+	public static getLevelFeatures(name: string, level: number): Promise<listResponse | apiError>
+	public static getLevelSpells(name: string, level: number): Promise<listResponse | apiError>
 }
 
 export class Races {
@@ -107,6 +112,20 @@ export interface skillInfo {
 	ability_score: nameUrlReference,
 	url: string
 }
+
+export interface equipmentInfo {
+	_id: string,
+	index: string,
+	name: string,
+	equipment_category: nameUrlReference,
+	gear_category: string,
+	cost: moneyReference,
+	quantity: number,
+	weight: number,
+	url: string
+}
+
+
 
 export interface spellInfo {
 	_id: string,
@@ -293,7 +312,13 @@ export interface levelInfo {
 export interface listElement {
 	index: string,
 	name: string,
-	url: string
+	url: string,
+	class: string
+}
+
+export interface listResponse {
+	count: number,
+	results: listElement[]
 }
 
 export interface listResponse {
@@ -304,6 +329,11 @@ export interface listResponse {
 export interface nameUrlReference {
 	url: string,
 	name: string
+}
+
+export interface moneyReference {
+	quantity: number,
+	unit: string
 }
 
 export interface apiError {
