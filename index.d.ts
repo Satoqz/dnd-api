@@ -40,17 +40,10 @@ export class Classes {
 	public static getSpells(name: string): Promise<listResponse | apiError>
 	public static getSpellCasting(name: string): Promise<listResponse | apiError>
 	public static getProficiencies(name: string): Promise<listResponse | apiError>
-<<<<<<< HEAD
 	public static getLevels(name: string): Promise<levelsInfo | apiError>
 	public static getLevel(name: string, level: number): Promise<levelInfo | apiError>
 	public static getLevelFeatures(name: string, level: number): Promise<listResponse | apiError>
 	public static getLevelSpells(name: string, level: number): Promise<listResponse | apiError>
-=======
-	public static getLevels(name: string)
-	public static getLevel(name: string, level: number)
-	public static getLevelFeatures(name: string, level: number)
-	public static getLevelSpells(name: string, level: number)
->>>>>>> ede9ca3a78071afbc9d0d26c51f9bbef85797a39
 }
 
 export class Subclasses {
@@ -59,13 +52,8 @@ export class Subclasses {
 	public static getFeatures(name: string): Promise<listResponse | apiError>
 	public static getLevels(name: string): Promise<levelsInfo | apiError>
 	public static getLevel(name: string, level: number) : Promise<levelInfo | apiError>
-<<<<<<< HEAD
 	public static getLevelFeatures(name: string, level: number): Promise<listResponse | apiError>
 	public static getLevelSpells(name: string, level: number): Promise<listResponse | apiError>
-=======
-	public static getLevelFeatures(name: string, level: number)
-	public static getLevelSpells(name: string, level: number)
->>>>>>> ede9ca3a78071afbc9d0d26c51f9bbef85797a39
 }
 
 export class Races {
@@ -305,7 +293,6 @@ export interface levelInfo {
 export interface listElement {
 	index: string,
 	name: string,
-<<<<<<< HEAD
 	url: string,
 	class: string
 }
@@ -313,9 +300,6 @@ export interface listElement {
 export interface listResponse {
 	count: number,
 	results: listElement[]
-=======
-	url: string
->>>>>>> ede9ca3a78071afbc9d0d26c51f9bbef85797a39
 }
 
 export interface listResponse {
