@@ -10,14 +10,14 @@ export default class DefaultRoute {
 			let filtered;
 			let errored = true;
 			try {
-				filtered = data.results.filter(r => r.name.toLowerCase().startsWith(filter.toLowerCase()));
+				filtered = data.results.filter(r => r.name.toLowerCase().includes(filter.toLowerCase()));
 				errored = false;
 			} catch (e) {
 				// Work-around to fix the problem with that Starter-Equipment API not having name and crashing NodeJS
 			}
 			
 			if(errored) {
-				filtered = data.results.filter(r => r.class.toLowerCase().startsWith(filter.toLowerCase()));
+				filtered = data.results.filter(r => r.class.toLowerCase().includes(filter.toLowerCase()));
 			}
 			
 			return {
