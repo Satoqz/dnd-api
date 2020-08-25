@@ -13,6 +13,11 @@ export class Spells {
 	public static get(name: string): Promise<spellInfo | apiError>
 }
 
+export class Equipment {
+	public static list(): Promise<listResponse | apiError>
+	public static get(name: string): Promise<equipmentInfo | apiError>
+}
+
 export class StarterEquip {
 	public static list(): Promise<listResponse | apiError>
 	public static get(name: string): Promise<any | apiError>
@@ -107,6 +112,19 @@ export interface skillInfo {
 	ability_score: nameUrlReference,
 	url: string
 }
+
+export interface equipmentInfo {
+	_id: string,
+	index: string,
+	name: string,
+	equipment_category: nameUrlReference,
+	gear_category: string,
+	cost: moneyReference,
+	weight: number,
+	url: string
+}
+
+
 
 export interface spellInfo {
 	_id: string,
@@ -310,6 +328,11 @@ export interface listResponse {
 export interface nameUrlReference {
 	url: string,
 	name: string
+}
+
+export interface moneyReference {
+	quantity: number,
+	unit: string
 }
 
 export interface apiError {
