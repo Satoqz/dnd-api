@@ -1,12 +1,12 @@
 {
-  "name": "dnd-api-remastered",
+  "name": "dnd-api",
   "version": "1.3.2",
   "description": "node api wrapper of https://dnd5eapi.co/",
   "main": "build/lib.js",
   "scripts": {
     "build": "tsc"
   },
-  "author": "UnrealValentin",
+  "author": "Satoqz & UnrealValentin",
   "license": "ISC",
   "repository": {
     "type": "git",
