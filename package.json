@@ -1,6 +1,6 @@
 {
   "name": "dnd-api-remastered",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "node api wrapper of https://dnd5eapi.co/",
   "main": "build/lib.js",
   "scripts": {
