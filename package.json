@@ -1,0 +1,28 @@
+{
+  "name": "dnd-api-remastered",
+  "version": "1.2.0",
+  "description": "node api wrapper of https://dnd5eapi.co/",
+  "main": "build/lib.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "UnrealValentin",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "htps://github.com/UnrealValentin/dnd-api"
+  },
+  "dependencies": {
+    "@types/node-fetch": "^2.5.7",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.26",
+    "eslint": "^7.5.0",
+    "eslint-config-typescript-satoqz": "0.0.4",
+    "typescript": "^3.9.7"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-typescript-satoqz"
+  }
+}
