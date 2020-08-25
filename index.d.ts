@@ -18,6 +18,16 @@ export class Equipment {
 	public static get(name: string): Promise<equipmentInfo | apiError>
 }
 
+export class Equipment {
+	public static list(): Promise<listResponse | apiError>
+	public static get(name: string): Promise<equipmentInfo | apiError>
+}
+
+export class Languages {
+	public static list(): Promise<listResponse | apiError>
+	public static get(name: string): Promise<languageInfo | apiError>
+}
+
 export class StarterEquip {
 	public static list(): Promise<listResponse | apiError>
 	public static get(name: string): Promise<any | apiError>
@@ -101,6 +111,16 @@ export interface monsterInfo {
 	senses: {},
 	special_abilities: {}[],
 	actions: [],
+	url: string
+}
+
+export interface languageInfo {
+	_id: string,
+	index: string,
+	name: string,
+	type: string,
+	typical_speakers: string[],
+	script: string,
 	url: string
 }
 
