@@ -1,4 +1,5 @@
 # Dungeons and Dragons API Wrapper
+### This is a fork of [this](https://github.com/Satoqz/dnd-api) because the old one wasn't functioning correctly and isn't properly maintained anymore
 
 ### This is a Node API Wrapper of the [D&D 5th Edition API](http://www.dnd5eapi.co/)
 
