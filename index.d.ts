@@ -120,6 +120,7 @@ export interface equipmentInfo {
 	equipment_category: nameUrlReference,
 	gear_category: string,
 	cost: moneyReference,
+	quantity: number,
 	weight: number,
 	url: string
 }
