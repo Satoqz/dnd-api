@@ -18,11 +18,6 @@ export class Equipment {
 	public static get(name: string): Promise<equipmentInfo | apiError>
 }
 
-export class Equipment {
-	public static list(): Promise<listResponse | apiError>
-	public static get(name: string): Promise<equipmentInfo | apiError>
-}
-
 export class Languages {
 	public static list(): Promise<listResponse | apiError>
 	public static get(name: string): Promise<languageInfo | apiError>
