@@ -53,12 +53,3 @@ export class Traits extends DefaultRoute {
 export class WeaponProps extends DefaultRoute {
 	static readonly route = "weapon-properties/";
 }
-
-
-
-
-
-
-
-
-

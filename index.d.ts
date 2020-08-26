@@ -8,6 +8,31 @@ export class Skills {
 	public static get(name: string): Promise<skillInfo | apiError>
 }
 
+export class Conditions {
+	public static list(): Promise<listResponse | apiError>
+	public static get(name: string): Promise<basicInfo | apiError>
+}
+
+export class DamageTypes {
+	public static list(): Promise<listResponse | apiError>
+	public static get(name: string): Promise<basicInfo | apiError>
+}
+
+export class EquipCategories {
+	public static list(): Promise<listResponse | apiError>
+	public static get(name: string): Promise<equipCategoriesInfo | apiError>
+}
+
+export class Features {
+	public static list(): Promise<listResponse | apiError>
+	public static get(name: string): Promise<featuresInfo | apiError>
+}
+
+export class MagicSchools {
+	public static list(): Promise<listResponse | apiError>
+	public static get(name: string): Promise<basicInfo | apiError>
+}
+
 export class Spells {
 	public static list(): Promise<listResponse | apiError>
 	public static get(name: string): Promise<spellInfo | apiError>
@@ -125,6 +150,31 @@ export interface skillInfo {
 	name: string,
 	desc: string[],
 	ability_score: nameUrlReference,
+	url: string
+}
+
+export interface basicInfo {
+	_id: string,
+	index: string,
+	name: string,
+	desc: string[],
+	url: string
+}
+
+export interface equipCategoriesInfo {
+	_id: string,
+	index: string,
+	name: string,
+	equipment: nameUrlReference[],
+	url: string
+}
+
+export interface featuresInfo {
+	_id: string,
+	index: string,
+	name: string,
+	class: nameUrlReference[],
+	level: number,
 	url: string
 }
 
