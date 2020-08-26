@@ -33,6 +33,6 @@ Get a list of, for example, Monsters:
 Filter the list by initial or more letters:
 `const response = await Monsters.list("a")`<br>
 
-=> returns a list of all Monsters beginning with "a"
+=> returns a list of all Monsters containing "a"
 
 - Note: case-sensitivity is taken care of by the library
