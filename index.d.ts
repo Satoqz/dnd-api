@@ -328,7 +328,7 @@ export interface levelInfo {
 	level: number,
 	ability_score_bonuses: number,
 	prof_bonus: number,
-	feature_choices: [],
+	feature_choices: nameUrlReference[],
 	features: nameUrlReference[],
 	spellcasting: {
 		cantrips_known: number,
