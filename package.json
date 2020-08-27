@@ -1,6 +1,6 @@
 {
   "name": "dnd-api",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "node api wrapper of https://dnd5eapi.co/",
   "main": "build/lib.js",
   "scripts": {
