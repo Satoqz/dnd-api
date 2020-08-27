@@ -1,1 +1,28 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
 
+name: Package Testing
+
+on:
+  push:
+    branches: 
+      - master
+      - developement
+  pull_request:
+    branches: 
+      - master
+      - developement
+  schedule:
+    - cron: "0 2 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.1.1
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm test
+      - uses: iCrawl/action-tsc@v1
