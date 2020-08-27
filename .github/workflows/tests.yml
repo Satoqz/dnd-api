@@ -26,4 +26,3 @@ jobs:
       - run: npm ci
       - run: npm test
       - uses: iCrawl/action-tsc@v1
-      - run: npm test
