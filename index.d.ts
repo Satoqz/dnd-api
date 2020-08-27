@@ -75,7 +75,7 @@ export class Classes {
 	public static getSpells(name: string): Promise<listResponse | apiError>
 	public static getSpellCasting(name: string): Promise<listResponse | apiError>
 	public static getProficiencies(name: string): Promise<listResponse | apiError>
-	public static getLevels(name: string): Promise<levelsInfo | apiError>
+	public static getLevels(name: string): Promise<levelInfo[] | apiError>
 	public static getLevel(name: string, level: number): Promise<levelInfo | apiError>
 	public static getLevelFeatures(name: string, level: number): Promise<listResponse | apiError>
 	public static getLevelSpells(name: string, level: number): Promise<listResponse | apiError>
@@ -85,7 +85,7 @@ export class Subclasses {
 	public static list(): Promise<listResponse | apiError>
 	public static get(name: string): Promise<subclassInfo | apiError>
 	public static getFeatures(name: string): Promise<listResponse | apiError>
-	public static getLevels(name: string): Promise<levelsInfo | apiError>
+	public static getLevels(name: string): Promise<levelInfo[] | apiError>
 	public static getLevel(name: string, level: number) : Promise<levelInfo | apiError>
 	public static getLevelFeatures(name: string, level: number): Promise<listResponse | apiError>
 	public static getLevelSpells(name: string, level: number): Promise<listResponse | apiError>
@@ -319,32 +319,6 @@ export interface classInfo {
 		url: string,
 		class: string
 	},
-	url: string
-}
-
-export interface levelsInfo {
-	_id: string,
-	level: number,
-	ability_score_bonuses: number,
-	prof_bonus: number,
-	feature_choices: [],
-	features: nameUrlReference[],
-	spellcasting: {
-		cantrips_known: number,
-		spells_known: number,
-		spell_slots_level_1: number,
-		spell_slots_level_2: number,
-		spell_slots_level_3: number,
-		spell_slots_level_4: number,
-		spell_slots_level_5: number,
-		spell_slots_level_6: number,
-		spell_slots_level_7: number,
-		spell_slots_level_8: number,
-		spell_slots_level_9: number
-	},
-	class_specific: any,
-	index: number,
-	class: nameUrlReference,
 	url: string
 }
 
