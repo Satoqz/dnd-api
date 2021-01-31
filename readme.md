@@ -1,4 +1,4 @@
-# Dungeons and Dragons API Wrapper
+# Dungeons and Dragons API Wrapper (OUTDATED)
 <a href="https://github.com/Satoqz/dnd-api/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/Satoqz/dnd-api?style=for-the-badge"></a><a href="https://github.com/Satoqz/dnd-api/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/Satoqz/dnd-api?style=for-the-badge"></a><a href="https://github.com/Satoqz/dnd-api/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Satoqz/dnd-api?style=for-the-badge"></a><a href="https://github.com/Satoqz/dnd-api"><img alt="GitHub" src="https://img.shields.io/github/license/satoqz/dnd-api?style=for-the-badge"></a>
 <a href="https://www.npmjs.com/package/dnd-api"><img alt="npm (tag)" src="https://img.shields.io/npm/v/dnd-api/latest?style=for-the-badge"><img alt="npm" src="https://img.shields.io/npm/dt/dnd-api?style=for-the-badge"></a>
 
